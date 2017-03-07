@@ -20,3 +20,5 @@ RUN apk update && apk add make && apk add gcc && apk add g++ && \
         cd ../ && rm -rf CHIP_IO && \
         # Remove build tools, which are no longer needed after installation
         apk del git && apk del make && apk del gcc && apk del g++ && apk del flex && apk del bison
+
+ENTRYPOINT /bin/sh
