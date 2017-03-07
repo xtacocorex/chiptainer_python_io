@@ -17,11 +17,7 @@ docker pull ntc-registry.githost.io/nextthingco/chiptainer_python_io:master
 Now run the Docker container, allowing access to the GPIO directories, device memory, and the raw IO.
 
 ```
-<<<<<<< HEAD
-docker run -v /sys:/sys --cap-add SYS_RAWIO --device /dev/mem -it ntc-registry.githost.io/nextthingco/chiptainer_python_gpio:master
-=======
 docker run -v /sys:/sys --cap-add SYS_RAWIO --device /dev/mem -it ntc-registry.githost.io/nextthingco/chiptainer_python_io:master
->>>>>>> c6750fab6d4186878d04d0cfb103dd21077c0145
 ```
 
 To test, you can try setting the LCD-D5 pin value on CHIP. First, launch Python:
