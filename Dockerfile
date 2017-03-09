@@ -6,12 +6,8 @@ RUN apk update && apk add make && apk add gcc && apk add g++ && \
 	apk add flex && apk add bison && apk add git && \
         # Download python and tools for installing libraries
         apk add python-dev && apk add py-setuptools && \
-        # Download source code for device tree compiler needed for CHIP_IO
-        git clone https://github.com/atenart/dtc.git && \
-        # Build and install the device tree compiler
-        cd dtc && make && make install PREFIX=/usr && \
-        # Remove the device tree compiler source code now that we've built it
-        cd .. && rm dtc -rf && \
+        # Download the chip-dt-overlays package
+        apk add chip-dt-overlays && \
         # Download the latest CHIP_IO source code
         git clone https://github.com/xtacocorex/CHIP_IO.git && \
         # Install the CHIP_IO library from the proper directory
